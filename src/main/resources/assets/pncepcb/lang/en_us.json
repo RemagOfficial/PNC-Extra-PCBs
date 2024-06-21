@@ -1,0 +1,16 @@
+{
+  "itemGroup.pncepcb_tab": "PNC: Extra PCBs",
+
+  "item.pncepcb.primitive_unassembled_pcb": "Primitive Unassembled PCB",
+  "item.pncepcb.primitive_failed_pcb": "Primitive Failed PCB",
+  "item.pncepcb.primitive_finished_pcb": "Primitive PCB",
+  "item.pncepcb.primitive_empty_pcb": "Primitive Empty PCB",
+  "item.pncepcb.flexible_unassembled_pcb": "Flexible Unassembled PCB",
+  "item.pncepcb.flexible_failed_pcb": "Flexible Failed PCB",
+  "item.pncepcb.flexible_finished_pcb": "Flexible PCB",
+  "item.pncepcb.flexible_empty_pcb": "Flexible Empty PCB",
+  "item.pncepcb.high_power_unassembled_pcb": "High Power unassembled PCB",
+  "item.pncepcb.high_power_failed_pcb": "High Power Failed PCB",
+  "item.pncepcb.high_power_finished_pcb": "High Power PCB",
+  "item.pncepcb.high_power_empty_pcb": "High Power Empty PCB"
+}
