@@ -26,6 +26,9 @@ public class ModItems {
     public static final RegistryObject<Item> PRIMITIVE_EMPTY_PCB = addToTab(ITEMS.register("primitive_empty_pcb",
             () -> new Item(new Item.Properties())));
 
+    public static final RegistryObject<Item> PRIMITIVE_SUBSTRATE = addToTab(ITEMS.register("primitive_substrate",
+            () -> new Item(new Item.Properties())));
+
     public static final RegistryObject<Item> FLEXIBLE_UNASSEMBLED_PCB = addToTab(ITEMS.register("flexible_unassembled_pcb",
             () -> new Item(new Item.Properties())));
 

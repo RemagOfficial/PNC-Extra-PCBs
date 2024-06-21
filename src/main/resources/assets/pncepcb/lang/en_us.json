@@ -5,6 +5,7 @@
   "item.pncepcb.primitive_failed_pcb": "Primitive Failed PCB",
   "item.pncepcb.primitive_finished_pcb": "Primitive PCB",
   "item.pncepcb.primitive_empty_pcb": "Primitive Empty PCB",
+  "item.pncepcb.primitive_substrate": "Primitive Substrate",
   "item.pncepcb.flexible_unassembled_pcb": "Flexible Unassembled PCB",
   "item.pncepcb.flexible_failed_pcb": "Flexible Failed PCB",
   "item.pncepcb.flexible_finished_pcb": "Flexible PCB",
