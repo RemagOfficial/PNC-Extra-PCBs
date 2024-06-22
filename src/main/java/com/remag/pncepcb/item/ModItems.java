@@ -56,4 +56,48 @@ public class ModItems {
 
     public static final RegistryObject<Item> HIGH_POWER_EMPTY_PCB = addToTab(ITEMS.register("high_power_empty_pcb",
             HighPowerPCBItem::new));
+    public static final RegistryObject<Item> WATERPROOF_UNASSEMBLED_PCB = addToTab(ITEMS.register("waterproof_unassembled_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> WATERPROOF_FAILED_PCB = addToTab(ITEMS.register("waterproof_failed_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> WATERPROOF_FINISHED_PCB = addToTab(ITEMS.register("waterproof_finished_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> WATERPROOF_EMPTY_PCB = addToTab(ITEMS.register("waterproof_empty_pcb",
+            WaterproofPCBItem::new));
+    public static final RegistryObject<Item> HIGH_TEMP_UNASSEMBLED_PCB = addToTab(ITEMS.register("high_temp_unassembled_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> HIGH_TEMP_FAILED_PCB = addToTab(ITEMS.register("high_temp_failed_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> HIGH_TEMP_FINISHED_PCB = addToTab(ITEMS.register("high_temp_finished_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> HIGH_TEMP_EMPTY_PCB = addToTab(ITEMS.register("high_temp_empty_pcb",
+            HighTempPCBItem::new));
+    public static final RegistryObject<Item> NANO_UNASSEMBLED_PCB = addToTab(ITEMS.register("nano_unassembled_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> NANO_FAILED_PCB = addToTab(ITEMS.register("nano_failed_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> NANO_FINISHED_PCB = addToTab(ITEMS.register("nano_finished_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> NANO_EMPTY_PCB = addToTab(ITEMS.register("nano_empty_pcb",
+            NanoPCBItem::new));
+    public static final RegistryObject<Item> QUANTUM_UNASSEMBLED_PCB = addToTab(ITEMS.register("quantum_unassembled_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> QUANTUM_FAILED_PCB = addToTab(ITEMS.register("quantum_failed_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> QUANTUM_FINISHED_PCB = addToTab(ITEMS.register("quantum_finished_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> QUANTUM_EMPTY_PCB = addToTab(ITEMS.register("quantum_empty_pcb",
+            QuantumPCBItem::new));
 }

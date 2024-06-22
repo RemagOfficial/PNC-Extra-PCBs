@@ -14,5 +14,21 @@
   "item.pncepcb.high_power_unassembled_pcb": "High Power Unassembled PCB",
   "item.pncepcb.high_power_failed_pcb": "High Power Failed PCB",
   "item.pncepcb.high_power_finished_pcb": "High Power PCB",
-  "item.pncepcb.high_power_empty_pcb": "High Power Empty PCB"
+  "item.pncepcb.high_power_empty_pcb": "High Power Empty PCB",
+  "item.pncepcb.waterproof_unassembled_pcb": "Waterproof Unassembled PCB",
+  "item.pncepcb.waterproof_failed_pcb": "Waterproof Failed PCB",
+  "item.pncepcb.waterproof_finished_pcb": "Waterproof PCB",
+  "item.pncepcb.waterproof_empty_pcb": "Waterproof Empty PCB",
+  "item.pncepcb.high_temp_unassembled_pcb": "High Temperature Unassembled PCB",
+  "item.pncepcb.high_temp_failed_pcb": "High Temperature Failed PCB",
+  "item.pncepcb.high_temp_finished_pcb": "High Temperature PCB",
+  "item.pncepcb.high_temp_empty_pcb": "High Temperature Empty PCB",
+  "item.pncepcb.nano_unassembled_pcb": "Nano Unassembled PCB",
+  "item.pncepcb.nano_failed_pcb": "Nano Failed PCB",
+  "item.pncepcb.nano_finished_pcb": "Nano PCB",
+  "item.pncepcb.nano_empty_pcb": "Nano Empty PCB",
+  "item.pncepcb.quantum_unassembled_pcb": "Quantum Unassembled PCB",
+  "item.pncepcb.quantum_failed_pcb": "Quantum Failed PCB",
+  "item.pncepcb.quantum_finished_pcb": "Quantum PCB",
+  "item.pncepcb.quantum_empty_pcb": "Quantum Empty PCB"
 }
