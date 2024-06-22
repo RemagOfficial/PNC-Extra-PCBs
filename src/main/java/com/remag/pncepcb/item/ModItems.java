@@ -24,7 +24,7 @@ public class ModItems {
             () -> new Item(new Item.Properties())));
 
     public static final RegistryObject<Item> PRIMITIVE_EMPTY_PCB = addToTab(ITEMS.register("primitive_empty_pcb",
-            () -> new Item(new Item.Properties())));
+            PCBItem::new));
 
     public static final RegistryObject<Item> PRIMITIVE_SUBSTRATE = addToTab(ITEMS.register("primitive_substrate",
             () -> new Item(new Item.Properties())));
@@ -39,7 +39,7 @@ public class ModItems {
             () -> new Item(new Item.Properties())));
 
     public static final RegistryObject<Item> FLEXIBLE_EMPTY_PCB = addToTab(ITEMS.register("flexible_empty_pcb",
-            () -> new Item(new Item.Properties())));
+            PCBItem::new));
 
     public static final RegistryObject<Item> HIGH_POWER_UNASSEMBLED_PCB = addToTab(ITEMS.register("high_power_unassembled_pcb",
             () -> new Item(new Item.Properties())));
@@ -47,9 +47,9 @@ public class ModItems {
     public static final RegistryObject<Item> HIGH_POWER_FAILED_PCB = addToTab(ITEMS.register("high_power_failed_pcb",
             () -> new Item(new Item.Properties())));
 
-        public static final RegistryObject<Item> HIGH_POWER_FINISHED_PCB = addToTab(ITEMS.register("high_power_finished_pcb",
+    public static final RegistryObject<Item> HIGH_POWER_FINISHED_PCB = addToTab(ITEMS.register("high_power_finished_pcb",
             () -> new Item(new Item.Properties())));
 
     public static final RegistryObject<Item> HIGH_POWER_EMPTY_PCB = addToTab(ITEMS.register("high_power_empty_pcb",
-            () -> new Item(new Item.Properties())));
+            PCBItem::new));
 }
