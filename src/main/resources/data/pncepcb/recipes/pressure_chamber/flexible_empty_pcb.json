@@ -1,0 +1,24 @@
+{
+  "type": "pneumaticcraft:pressure_chamber",
+  "inputs": [
+    {
+      "type": "pneumaticcraft:stacked_item",
+      "tag": "forge:nuggets/copper",
+      "count": 4
+    },
+    {
+      "type": "pneumaticcraft:stacked_item",
+      "item": "minecraft:redstone_torch",
+      "count": 2
+    },
+    {
+      "item": "pncepcb:flexible_substrate"
+    }
+  ],
+  "pressure": 3.0,
+  "results": [
+    {
+      "item": "pncepcb:flexible_empty_pcb"
+    }
+  ]
+}

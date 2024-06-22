@@ -1,0 +1,19 @@
+{
+  "type": "pneumaticcraft:pressure_chamber",
+  "inputs": [
+    {
+      "item": "pneumaticcraft:plastic_bucket"
+    },
+    {
+      "type": "pneumaticcraft:stacked_item",
+      "tag": "forge:dyes/yellow",
+      "count": 2
+    }
+  ],
+  "pressure": 3.0,
+  "results": [
+    {
+      "item": "pncepcb:flexible_substrate"
+    }
+  ]
+}
