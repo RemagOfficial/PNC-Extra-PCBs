@@ -3,9 +3,10 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-version = mod_version + '-' + minecraft_version
+version = mod_version
 group = mod_group_id
 
 base {
@@ -84,8 +85,6 @@ minecraft {
         client {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
         }
 
         server {
@@ -126,7 +125,12 @@ repositories {
     maven {
         url "https://cursemaven.com"
     }
-
+    flatDir {
+        dirs 'run/external-mods'
+        content {
+            includeGroup 'local'
+        }
+    }
 }
 
 dependencies {
@@ -148,7 +152,8 @@ dependencies {
     // The group id is ignored when searching -- in this case, it is "blank"
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
 
-    implementation fg.deobf("curse.maven:pneumaticcraft-repressurized-281849:5279325")
+    implementation fg.deobf("local:pneumaticcraft-repressurized:6.0.15+mc1.20.1")
+    // implementation fg.deobf("curse.maven:pneumaticcraft-repressurized-281849:5279325")
     implementation fg.deobf("curse.maven:patchouli-306770:4966125")
     implementation fg.deobf("curse.maven:roughly-enough-items-310111:5301376")
     implementation fg.deobf("curse.maven:architectury-api-419699:5137938")

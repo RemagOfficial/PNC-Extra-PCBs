@@ -3,7 +3,6 @@ package com.remag.pncepcb;
 import com.mojang.logging.LogUtils;
 import com.remag.pncepcb.item.ModItems;
 import com.remag.pncepcb.tab.ModCreativeModeTab;
-import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -22,7 +21,7 @@ public class PNCExtraPCBs
     // Define mod id in a common place for everything to reference
     public static final String MODID = "pncepcb";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public PNCExtraPCBs()
     {
@@ -30,7 +29,7 @@ public class PNCExtraPCBs
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-        // Register the Deferred Register to the mod event bus so items get registered
+
         ModItems.ITEMS.register(modEventBus);
         ModCreativeModeTab.TABS.register(modEventBus);
 
@@ -47,8 +46,7 @@ public class PNCExtraPCBs
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+        // Some server starting code
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -59,8 +57,6 @@ public class PNCExtraPCBs
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
 }

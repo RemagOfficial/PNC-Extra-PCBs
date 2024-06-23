@@ -98,9 +98,8 @@ public class HighPowerPCBItem extends EmptyPCBItem {
 
     @Override
     public int getCustomDurabilityColour(ItemStack stack) {
-        return MapColor.EMERALD.col;
+        return MapColor.COLOR_RED.col;
     }
-
     @Override
     public float getCustomDurability(ItemStack stack) {
         return EmptyPCBItem.getEtchProgress(stack) / 100f;
