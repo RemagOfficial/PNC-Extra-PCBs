@@ -2,6 +2,7 @@ package com.remag.pncepcb.tab;
 
 import com.remag.pncepcb.PNCExtraPCBs;
 import com.remag.pncepcb.item.ModItems;
+import me.desht.pneumaticcraft.common.item.CreativeTabStackProvider;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -14,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class ModCreativeModeTab {
 
@@ -26,9 +28,19 @@ public class ModCreativeModeTab {
                     .title(Component.translatable("itemGroup.pncepcb_tab"))
                     .icon(ModItems.HIGH_POWER_FINISHED_PCB.get().asItem()::getDefaultInstance)
                     .displayItems((displayParams, output) ->
-                            PNCEPCB_TABS.forEach(itemLike -> output.accept(new ItemStack(itemLike.get()))))
+                            PNCEPCB_TABS.stream()
+                                    .flatMap(itemLike -> stacksForItem(itemLike.get()))
+                                    .forEach(output::accept))
                     .build()
     );
+
+    private static Stream<ItemStack> stacksForItem(ItemLike item) {
+        ItemStack stack = new ItemStack(item);
+        if (item instanceof CreativeTabStackProvider provider) {
+            return provider.getStacksForItem();
+        }
+        return Stream.of(stack);
+    }
 
     public static <T extends Item> RegistryObject<T> addToTab(RegistryObject<T> itemLike) {
         PNCEPCB_TABS.add(itemLike);

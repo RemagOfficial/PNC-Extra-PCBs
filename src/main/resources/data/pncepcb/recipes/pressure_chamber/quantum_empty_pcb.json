@@ -1,0 +1,22 @@
+{
+  "type": "pneumaticcraft:pressure_chamber",
+  "inputs": [
+    {
+      "type": "pneumaticcraft:stacked_item",
+      "item": "minecraft:redstone_torch",
+      "count": 4
+    },
+    {
+      "item": "pneumaticcraft:unassembled_pcb"
+    },
+    {
+      "item": "minecraft:dragon_egg"
+    }
+  ],
+  "pressure": 5.0,
+  "results": [
+    {
+      "item": "pncepcb:quantum_empty_pcb"
+    }
+  ]
+}

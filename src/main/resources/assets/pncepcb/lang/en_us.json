@@ -30,5 +30,9 @@
   "item.pncepcb.quantum_unassembled_pcb": "Quantum Unassembled PCB",
   "item.pncepcb.quantum_failed_pcb": "Quantum Failed PCB",
   "item.pncepcb.quantum_finished_pcb": "Quantum PCB",
-  "item.pncepcb.quantum_empty_pcb": "Quantum Empty PCB"
+  "item.pncepcb.quantum_empty_pcb": "Quantum Empty PCB",
+  "item.pncepcb.microcontroller_unassembled_pcb": "Microcontroller Unassembled PCB",
+  "item.pncepcb.microcontroller_failed_pcb": "Microcontroller Failed PCB",
+  "item.pncepcb.microcontroller_finished_pcb": "Microcontroller",
+  "item.pncepcb.microcontroller_empty_pcb": "Microcontroller Empty PCB"
 }
