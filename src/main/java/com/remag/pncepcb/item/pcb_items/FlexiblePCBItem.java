@@ -1,5 +1,6 @@
-package com.remag.pncepcb.item;
+package com.remag.pncepcb.item.pcb_items;
 
+import com.remag.pncepcb.item.ModItems;
 import me.desht.pneumaticcraft.api.data.PneumaticCraftTags;
 import me.desht.pneumaticcraft.common.block.entity.UVLightBoxBlockEntity;
 import me.desht.pneumaticcraft.common.item.EmptyPCBItem;
@@ -15,7 +16,7 @@ import org.apache.commons.lang3.Validate;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-public class HighPowerPCBItem extends EmptyPCBItem {
+public class FlexiblePCBItem extends EmptyPCBItem {
 
     private static final String NBT_ETCH_PROGRESS = "pneumaticcraft:etch_progress";
 
@@ -77,13 +78,13 @@ public class HighPowerPCBItem extends EmptyPCBItem {
                     }
                 }
 
-                ItemStack successStack = new ItemStack(successCount == 0 ? ModItems.HIGH_POWER_FAILED_PCB.get() : ModItems.HIGH_POWER_UNASSEMBLED_PCB.get(),
+                ItemStack successStack = new ItemStack(successCount == 0 ? ModItems.FLEXIBLE_FAILED_PCB.get() : ModItems.FLEXIBLE_UNASSEMBLED_PCB.get(),
                         successCount == 0 ? failedCount : successCount);
                 entityItem.setItem(successStack);
 
                 // Only when we have failed items and the existing item entity wasn't reused already for the failed items.
                 if (successCount > 0 && failedCount > 0) {
-                    ItemStack failedStack = new ItemStack(ModItems.HIGH_POWER_FAILED_PCB.get(), failedCount);
+                    ItemStack failedStack = new ItemStack(ModItems.FLEXIBLE_FAILED_PCB.get(), failedCount);
                     entityItem.level().addFreshEntity(new ItemEntity(entityItem.level(), entityItem.getX(), entityItem.getY(), entityItem.getZ(), failedStack));
                 }
             }
@@ -98,8 +99,9 @@ public class HighPowerPCBItem extends EmptyPCBItem {
 
     @Override
     public int getCustomDurabilityColour(ItemStack stack) {
-        return MapColor.COLOR_RED.col;
+        return MapColor.EMERALD.col;
     }
+
     @Override
     public float getCustomDurability(ItemStack stack) {
         return EmptyPCBItem.getEtchProgress(stack) / 100f;

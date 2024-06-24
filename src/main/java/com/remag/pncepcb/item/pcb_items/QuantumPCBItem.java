@@ -1,5 +1,6 @@
-package com.remag.pncepcb.item;
+package com.remag.pncepcb.item.pcb_items;
 
+import com.remag.pncepcb.item.ModItems;
 import me.desht.pneumaticcraft.api.data.PneumaticCraftTags;
 import me.desht.pneumaticcraft.common.block.entity.UVLightBoxBlockEntity;
 import me.desht.pneumaticcraft.common.item.EmptyPCBItem;
@@ -15,7 +16,7 @@ import org.apache.commons.lang3.Validate;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-public class MicrocontrollerPCBItem extends EmptyPCBItem {
+public class QuantumPCBItem extends EmptyPCBItem {
 
     private static final String NBT_ETCH_PROGRESS = "pneumaticcraft:etch_progress";
 
@@ -77,13 +78,13 @@ public class MicrocontrollerPCBItem extends EmptyPCBItem {
                     }
                 }
 
-                ItemStack successStack = new ItemStack(successCount == 0 ? ModItems.MICROCONTROLLER_FAILED_PCB.get() : ModItems.MICROCONTROLLER_UNASSEMBLED_PCB.get(),
+                ItemStack successStack = new ItemStack(successCount == 0 ? ModItems.QUANTUM_FAILED_PCB.get() : ModItems.QUANTUM_UNASSEMBLED_PCB.get(),
                         successCount == 0 ? failedCount : successCount);
                 entityItem.setItem(successStack);
 
                 // Only when we have failed items and the existing item entity wasn't reused already for the failed items.
                 if (successCount > 0 && failedCount > 0) {
-                    ItemStack failedStack = new ItemStack(ModItems.MICROCONTROLLER_FAILED_PCB.get(), failedCount);
+                    ItemStack failedStack = new ItemStack(ModItems.QUANTUM_FAILED_PCB.get(), failedCount);
                     entityItem.level().addFreshEntity(new ItemEntity(entityItem.level(), entityItem.getX(), entityItem.getY(), entityItem.getZ(), failedStack));
                 }
             }

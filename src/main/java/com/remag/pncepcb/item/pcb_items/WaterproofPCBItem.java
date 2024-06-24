@@ -1,5 +1,6 @@
-package com.remag.pncepcb.item;
+package com.remag.pncepcb.item.pcb_items;
 
+import com.remag.pncepcb.item.ModItems;
 import me.desht.pneumaticcraft.api.data.PneumaticCraftTags;
 import me.desht.pneumaticcraft.common.block.entity.UVLightBoxBlockEntity;
 import me.desht.pneumaticcraft.common.item.EmptyPCBItem;
