@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "tag": "pneumaticcraft:wiring"
+    },
+    "S": {
+      "tag": "forge:slimeballs"
+    },
+    "P": {
+      "item": "pneumaticcraft:plastic"
+    },
+    "p": {
+      "item": "minecraft:piston"
+    }
+  },
+  "pattern": [
+    " p ",
+    " P ",
+    "WSW"
+  ],
+  "result": {
+    "item": "pncepcb:smd_capacitor"
+  },
+  "show_notification": true
+}

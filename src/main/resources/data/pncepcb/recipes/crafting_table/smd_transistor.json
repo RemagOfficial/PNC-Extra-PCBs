@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "tag": "pneumaticcraft:wiring"
+    },
+    "S": {
+      "tag": "forge:slimeballs"
+    },
+    "P": {
+      "item": "pneumaticcraft:plastic"
+    },
+    "p": {
+      "item": "minecraft:piston"
+    }
+  },
+  "pattern": [
+    " p ",
+    "SPS",
+    "WWW"
+  ],
+  "result": {
+    "item": "pncepcb:smd_transistor"
+  },
+  "show_notification": true
+}
