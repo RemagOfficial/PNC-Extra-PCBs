@@ -27,6 +27,8 @@
   "item.pncepcb.nano_failed_pcb": "Nano Failed PCB",
   "item.pncepcb.nano_finished_pcb": "Nano PCB",
   "item.pncepcb.nano_empty_pcb": "Nano Empty PCB",
+  "item.pncepcb.smd_capacitor": "SMD Capacitor",
+  "item.pncepcb.smd_transistor": "SMD Transistor",
   "item.pncepcb.quantum_unassembled_pcb": "Quantum Unassembled PCB",
   "item.pncepcb.quantum_failed_pcb": "Quantum Failed PCB",
   "item.pncepcb.quantum_finished_pcb": "Quantum PCB",
@@ -34,5 +36,7 @@
   "item.pncepcb.microcontroller_unassembled_pcb": "Microcontroller Unassembled PCB",
   "item.pncepcb.microcontroller_failed_pcb": "Microcontroller Failed PCB",
   "item.pncepcb.microcontroller_finished_pcb": "Microcontroller",
-  "item.pncepcb.microcontroller_empty_pcb": "Microcontroller Empty PCB"
+  "item.pncepcb.microcontroller_empty_pcb": "Microcontroller Empty PCB",
+  "item.pncepcb.microcontroller_capacitor": "Microcontroller Capacitor",
+  "item.pncepcb.microcontroller_transistor": "Microcontroller Transistor"
 }

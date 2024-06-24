@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "C": {
-      "item": "pneumaticcraft:capacitor"
+      "item": "pncepcb:microcontroller_capacitor"
     },
     "T": {
-      "item": "pneumaticcraft:transistor"
+      "item": "pncepcb:microcontroller_transistor"
     },
     "U": {
       "item": "pncepcb:microcontroller_unassembled_pcb"

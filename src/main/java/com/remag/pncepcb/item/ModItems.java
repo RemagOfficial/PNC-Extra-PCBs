@@ -45,6 +45,12 @@ public class ModItems {
     public static final RegistryObject<Item> FLEXIBLE_SUBSTRATE = addToTab(ITEMS.register("flexible_substrate",
             () -> new Item(new Item.Properties())));
 
+    public static final RegistryObject<Item> SMD_CAPACITOR = addToTab(ITEMS.register("smd_capacitor",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> SMD_TRANSISTOR = addToTab(ITEMS.register("smd_transistor",
+            () -> new Item(new Item.Properties())));
+
     public static final RegistryObject<Item> HIGH_POWER_UNASSEMBLED_PCB = addToTab(ITEMS.register("high_power_unassembled_pcb",
             () -> new Item(new Item.Properties())));
 
@@ -116,4 +122,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> MICROCONTROLLER_EMPTY_PCB = addToTab(ITEMS.register("microcontroller_empty_pcb",
             MicrocontrollerPCBItem::new));
+
+    public static final RegistryObject<Item> MICROCONTROLLER_CAPACITOR = addToTab(ITEMS.register("microcontroller_capacitor",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> MICROCONTROLLER_TRANSISTOR = addToTab(ITEMS.register("microcontroller_transistor",
+            () -> new Item(new Item.Properties())));
 }

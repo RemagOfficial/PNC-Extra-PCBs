@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "C": {
-      "item": "pneumaticcraft:capacitor"
+      "item": "pncepcb:smd_capacitor"
     },
     "T": {
-      "item": "pneumaticcraft:transistor"
+      "item": "pncepcb:smd_transistor"
     },
     "U": {
       "item": "pncepcb:flexible_unassembled_pcb"
