@@ -118,4 +118,12 @@ public class FlexiblePCBItem extends EmptyPCBItem {
         ItemStack stack2 = UVLightBoxBlockEntity.setExposureProgress(stack.copy(), 100);
         return Stream.of(stack, stack2);
     }
+
+    public ItemStack getSuccessItem() {
+        return new ItemStack(ModItems.FLEXIBLE_UNASSEMBLED_PCB.get());
+    }
+
+    public ItemStack getFailedItem() {
+        return new ItemStack(ModItems.FLEXIBLE_FAILED_PCB.get());
+    }
 }
