@@ -1,7 +1,7 @@
 package com.remag.pncepcb.item;
 
 import com.remag.pncepcb.PNCExtraPCBs;
-import me.desht.pneumaticcraft.common.item.EmptyPCBItem;
+import com.remag.pncepcb.item.pcb_items.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
@@ -140,4 +140,28 @@ public class ModItems {
 
     public static final RegistryObject<Item> CRYSTAL_CLEAR_EMPTY_PCB = addToTab(ITEMS.register("crystal_clear_empty_pcb",
             CrystalClearPCBItem::new));
+
+    public static final RegistryObject<Item> RADIATION_HARDENED_UNASSEMBLED_PCB = addToTab(ITEMS.register("radiation_hardened_unassembled_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> RADIATION_HARDENED_FAILED_PCB = addToTab(ITEMS.register("radiation_hardened_failed_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> RADIATION_HARDENED_FINISHED_PCB = addToTab(ITEMS.register("radiation_hardened_finished_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> RADIATION_HARDENED_EMPTY_PCB = addToTab(ITEMS.register("radiation_hardened_empty_pcb",
+            RadiationHardenedPCBItem::new));
+
+    public static final RegistryObject<Item> BIO_COMPATIBLE_UNASSEMBLED_PCB = addToTab(ITEMS.register("bio_compatible_unassembled_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> BIO_COMPATIBLE_FAILED_PCB = addToTab(ITEMS.register("bio_compatible_failed_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> BIO_COMPATIBLE_FINISHED_PCB = addToTab(ITEMS.register("bio_compatible_finished_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> BIO_COMPATIBLE_EMPTY_PCB = addToTab(ITEMS.register("bio_compatible_empty_pcb",
+            BioCompatiblePCBItem::new));
 }

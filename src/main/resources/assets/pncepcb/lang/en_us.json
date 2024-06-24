@@ -42,5 +42,13 @@
   "item.pncepcb.crystal_clear_unassembled_pcb": "Crystal Clear™ Unassembled PCB",
   "item.pncepcb.crystal_clear_failed_pcb": "Crystal Clear™ Failed PCB",
   "item.pncepcb.crystal_clear_finished_pcb": "Crystal Clear™ PCB",
-  "item.pncepcb.crystal_clear_empty_pcb": "Crystal Clear™ Empty PCB"
+  "item.pncepcb.crystal_clear_empty_pcb": "Crystal Clear™ Empty PCB",
+  "item.pncepcb.radiation_hardened_unassembled_pcb": "Radiation Hardened Unassembled PCB",
+  "item.pncepcb.radiation_hardened_failed_pcb": "Radiation Hardened Failed PCB",
+  "item.pncepcb.radiation_hardened_finished_pcb": "Radiation Hardened PCB",
+  "item.pncepcb.radiation_hardened_empty_pcb": "Radiation Hardened Empty PCB",
+  "item.pncepcb.bio_compatible_unassembled_pcb": "Bio-Compatible Unassembled PCB",
+  "item.pncepcb.bio_compatible_failed_pcb": "Bio-Compatible Failed PCB",
+  "item.pncepcb.bio_compatible_finished_pcb": "Bio-Compatible PCB",
+  "item.pncepcb.bio_compatible_empty_pcb": "Bio-Compatible Empty PCB"
 }
