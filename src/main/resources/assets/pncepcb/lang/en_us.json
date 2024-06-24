@@ -38,5 +38,9 @@
   "item.pncepcb.microcontroller_finished_pcb": "Microcontroller",
   "item.pncepcb.microcontroller_empty_pcb": "Microcontroller Empty PCB",
   "item.pncepcb.microcontroller_capacitor": "Microcontroller Capacitor",
-  "item.pncepcb.microcontroller_transistor": "Microcontroller Transistor"
+  "item.pncepcb.microcontroller_transistor": "Microcontroller Transistor",
+  "item.pncepcb.crystal_clear_unassembled_pcb": "Crystal Clear™ Unassembled PCB",
+  "item.pncepcb.crystal_clear_failed_pcb": "Crystal Clear™ Failed PCB",
+  "item.pncepcb.crystal_clear_finished_pcb": "Crystal Clear™ PCB",
+  "item.pncepcb.crystal_clear_empty_pcb": "Crystal Clear™ Empty PCB"
 }

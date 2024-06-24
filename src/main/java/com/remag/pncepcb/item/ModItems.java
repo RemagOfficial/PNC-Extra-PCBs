@@ -128,4 +128,16 @@ public class ModItems {
 
     public static final RegistryObject<Item> MICROCONTROLLER_TRANSISTOR = addToTab(ITEMS.register("microcontroller_transistor",
             () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> CRYSTAL_CLEAR_UNASSEMBLED_PCB = addToTab(ITEMS.register("crystal_clear_unassembled_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> CRYSTAL_CLEAR_FAILED_PCB = addToTab(ITEMS.register("crystal_clear_failed_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> CRYSTAL_CLEAR_FINISHED_PCB = addToTab(ITEMS.register("crystal_clear_finished_pcb",
+            () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> CRYSTAL_CLEAR_EMPTY_PCB = addToTab(ITEMS.register("crystal_clear_empty_pcb",
+            CrystalClearPCBItem::new));
 }
