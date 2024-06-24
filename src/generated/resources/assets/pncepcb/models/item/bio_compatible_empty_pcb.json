@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pncepcb:item/bio_compatible_empty_pcb"
+  }
+}
