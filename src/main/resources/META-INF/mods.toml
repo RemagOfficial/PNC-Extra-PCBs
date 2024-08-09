@@ -66,8 +66,8 @@ description='''${mod_description}'''
 # PneumaticCraft Mod Dependencies
 [[dependencies.${mod_id}]]
     modId="pneumaticcraft"
-    mandatory=false
-    versionRange="6.0.15"
+    mandatory=true
+    versionRange="6.0.16"
     ordering="NONE"
     side="BOTH"
 

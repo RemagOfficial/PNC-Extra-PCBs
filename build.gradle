@@ -160,7 +160,7 @@ dependencies {
     // The group id is ignored when searching -- in this case, it is "blank"
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
 
-    implementation fg.deobf("me.desht.pneumaticcraft:pneumaticcraft-repressurized:6.0.16+mc${minecraft_version}-SNAPSHOT")
+    implementation fg.deobf("me.desht.pneumaticcraft:pneumaticcraft-repressurized:6.0.16+mc${minecraft_version}")
     // implementation fg.deobf("local:pneumaticcraft-repressurized:6.0.15+mc1.20.1")
     // implementation fg.deobf("curse.maven:pneumaticcraft-repressurized-281849:5279325")
     implementation fg.deobf("curse.maven:patchouli-306770:4966125")
