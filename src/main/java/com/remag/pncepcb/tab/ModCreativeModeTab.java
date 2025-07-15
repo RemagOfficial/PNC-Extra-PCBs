@@ -1,15 +1,18 @@
 package com.remag.pncepcb.tab;
 
 import com.remag.pncepcb.PNCExtraPCBs;
+import com.remag.pncepcb.config.ModConfig;
 import com.remag.pncepcb.item.ModItems;
 import me.desht.pneumaticcraft.common.item.CreativeTabStackProvider;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.ArrayList;
@@ -27,10 +30,17 @@ public class ModCreativeModeTab {
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.pncepcb_tab"))
                     .icon(ModItems.HIGH_POWER_FINISHED_PCB.get().asItem()::getDefaultInstance)
-                    .displayItems((displayParams, output) ->
-                            PNCEPCB_TABS.stream()
-                                    .flatMap(itemLike -> stacksForItem(itemLike.get()))
-                                    .forEach(output::accept))
+                    .displayItems((params, output) -> {
+                        for (Supplier<? extends ItemLike> itemSupplier : ModItems.ITEMS.getEntries()) {
+                            Item item = itemSupplier.get().asItem();
+                            ResourceLocation id = ForgeRegistries.ITEMS.getKey(item);
+
+                            // Check the config here—it's safe now
+                            if (id != null && ModConfig.COMMON.isItemEnabled(id.toString())) {
+                                output.accept(item);
+                            }
+                        }
+                    })
                     .build()
     );
 
@@ -43,7 +53,8 @@ public class ModCreativeModeTab {
     }
 
     public static <T extends Item> RegistryObject<T> addToTab(RegistryObject<T> itemLike) {
-        PNCEPCB_TABS.add(itemLike);
+            PNCEPCB_TABS.add(itemLike);
         return itemLike;
     }
+
 }

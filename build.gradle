@@ -160,14 +160,19 @@ dependencies {
     // The group id is ignored when searching -- in this case, it is "blank"
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
 
-    implementation fg.deobf("me.desht.pneumaticcraft:pneumaticcraft-repressurized:6.0.16+mc${minecraft_version}")
-    // implementation fg.deobf("local:pneumaticcraft-repressurized:6.0.15+mc1.20.1")
-    // implementation fg.deobf("curse.maven:pneumaticcraft-repressurized-281849:5279325")
+    implementation fg.deobf("me.desht.pneumaticcraft:pneumaticcraft-repressurized:6.0.20+mc${minecraft_version}")
     implementation fg.deobf("curse.maven:patchouli-306770:4966125")
-    implementation fg.deobf("curse.maven:roughly-enough-items-310111:5301376")
     implementation fg.deobf("curse.maven:architectury-api-419699:5137938")
     implementation fg.deobf("curse.maven:cloth-config-348521:4973441")
-    implementation fg.deobf("curse.maven:roughly-enough-items-hacks-521393:4837449")
+
+    compileOnly fg.deobf("curse.maven:jei-238222:6600311")
+    // runtimeOnly fg.deobf("curse.maven:jei-238222:6600311")
+
+    compileOnly fg.deobf("curse.maven:roughly-enough-items-310111:5301376")
+    runtimeOnly fg.deobf("curse.maven:roughly-enough-items-310111:5301376")
+
+    compileOnly fg.deobf("curse.maven:roughly-enough-items-hacks-521393:4837449")
+    runtimeOnly fg.deobf("curse.maven:roughly-enough-items-hacks-521393:4837449")
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
