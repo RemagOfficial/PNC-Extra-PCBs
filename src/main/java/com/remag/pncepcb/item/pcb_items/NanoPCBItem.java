@@ -2,31 +2,28 @@ package com.remag.pncepcb.item.pcb_items;
 
 import com.remag.pncepcb.item.ModItems;
 import me.desht.pneumaticcraft.api.data.PneumaticCraftTags;
-import me.desht.pneumaticcraft.common.block.entity.UVLightBoxBlockEntity;
+import me.desht.pneumaticcraft.common.block.entity.processing.UVLightBoxBlockEntity;
 import me.desht.pneumaticcraft.common.item.EmptyPCBItem;
+import me.desht.pneumaticcraft.common.registry.ModDataComponents;
 import me.desht.pneumaticcraft.lib.BlockEntityConstants;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.MapColor;
 import org.apache.commons.lang3.Validate;
 
-import java.util.Objects;
 import java.util.stream.Stream;
 
 public class NanoPCBItem extends EmptyPCBItem {
 
-    private static final String NBT_ETCH_PROGRESS = "pneumaticcraft:etch_progress";
-
     public static int getEtchProgress(ItemStack stack) {
-        return stack.hasTag() ? Objects.requireNonNull(stack.getTag()).getInt(NBT_ETCH_PROGRESS) : 0;
+        return stack.getOrDefault(ModDataComponents.ETCH_PROGRESS, 0);
     }
 
     public static void setEtchProgress(ItemStack stack, int progress) {
         Validate.isTrue(progress >= 0 && progress <= 100);
-        stack.getOrCreateTag().putInt(NBT_ETCH_PROGRESS, progress);
+        stack.set(ModDataComponents.ETCH_PROGRESS, progress);
     }
 
     @Override
@@ -51,9 +48,6 @@ public class NanoPCBItem extends EmptyPCBItem {
         super.onEntityItemUpdate(stack, entityItem);
 
         if (entityItem.level().getFluidState(entityItem.blockPosition()).getType().is(PneumaticCraftTags.Fluids.ETCHING_ACID)) {
-            if (!stack.hasTag()) {
-                stack.setTag(new CompoundTag());
-            }
             int etchProgress = getEtchProgress(stack);
             if (etchProgress < 100) {
                 if (entityItem.tickCount % (BlockEntityConstants.PCB_ETCH_TIME / 5) == 0) {

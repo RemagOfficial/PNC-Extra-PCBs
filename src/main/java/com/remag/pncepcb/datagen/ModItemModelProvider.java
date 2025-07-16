@@ -3,12 +3,10 @@ package com.remag.pncepcb.datagen;
 import com.remag.pncepcb.PNCExtraPCBs;
 import com.remag.pncepcb.item.ModItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
@@ -18,14 +16,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        for (RegistryObject<Item> item : ModItems.ITEMS.getEntries()) {
-            simpleItem(item);
+        for (DeferredHolder<Item, ? extends Item> item : ModItems.ITEMS.getEntries()) {
+            basicItem(item.get());
         }
-    }
-
-    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(PNCExtraPCBs.MODID, "item/" + item.getId().getPath()));
     }
 }

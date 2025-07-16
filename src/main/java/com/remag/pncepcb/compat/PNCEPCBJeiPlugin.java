@@ -8,18 +8,18 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.*;
 import mezz.jei.api.runtime.IIngredientManager;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
 import java.util.function.Supplier;
 
 @JeiPlugin
 public class PNCEPCBJeiPlugin implements IModPlugin {
-    private static final ResourceLocation ID = new ResourceLocation(PNCExtraPCBs.MODID, "jei_item_filter");
+    private static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(PNCExtraPCBs.MODID, "jei_item_filter");
 
     @Override
     public ResourceLocation getPluginUid() {
@@ -44,7 +44,7 @@ public class PNCEPCBJeiPlugin implements IModPlugin {
 
         for (Supplier<? extends ItemLike> itemSupplier : ModItems.ITEMS.getEntries()) {
             Item item = itemSupplier.get().asItem();
-            ResourceLocation id = ForgeRegistries.ITEMS.getKey(item);
+            ResourceLocation id = BuiltInRegistries.ITEM.getKey(item);
 
             if (id != null && !ModConfig.COMMON.isItemEnabled(id.toString())) {
                 ingredientManager.removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK,
