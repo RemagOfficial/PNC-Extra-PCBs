@@ -24,7 +24,7 @@ license="GPLv3"
 modId="pncepcb" #mandatory
 
 # The version number of the mod
-version="2.1.0" #mandatory
+version="2.2.0" #mandatory
 
 # A display name for the mod
 displayName="PNC: Extra PCBs" #mandatory

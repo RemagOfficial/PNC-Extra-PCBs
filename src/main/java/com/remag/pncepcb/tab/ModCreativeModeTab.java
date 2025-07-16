@@ -34,9 +34,10 @@ public class ModCreativeModeTab {
                         for (Supplier<? extends ItemLike> itemSupplier : ModItems.ITEMS.getEntries()) {
                             Item item = itemSupplier.get().asItem();
                             ResourceLocation id = BuiltInRegistries.ITEM.getKey(item);
+                            String pcbType = ModItems.ITEM_PCB_TYPES.getOrDefault(itemSupplier, "none");
 
                             // Check the config here—it's safe now
-                            if (id != null && ModConfig.COMMON.isItemEnabled(id.toString())) {
+                            if (id != null && ModConfig.COMMON.isItemEnabled(id.toString()) && ModConfig.COMMON.isPcbTypeEnabled(pcbType)) {
                                 output.accept(item);
                             }
                         }

@@ -4,14 +4,20 @@ import com.remag.pncepcb.PNCExtraPCBs;
 import com.remag.pncepcb.item.pcb_items.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Supplier;
 
 import static com.remag.pncepcb.tab.ModCreativeModeTab.addToTab;
 
 public class ModItems {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(PNCExtraPCBs.MODID);
+    public static final Map<Supplier<? extends ItemLike>, String> ITEM_PCB_TYPES = new HashMap<>();
 
     // items
 
@@ -164,4 +170,95 @@ public class ModItems {
 
     public static final DeferredItem<Item> BIO_COMPATIBLE_EMPTY_PCB = addToTab(ITEMS.register("bio_compatible_empty_pcb",
             BioCompatiblePCBItem::new));
+
+    // put items in type groups
+
+    static {
+        // primitive
+
+        ITEM_PCB_TYPES.put(PRIMITIVE_EMPTY_PCB, "primitive");
+        ITEM_PCB_TYPES.put(PRIMITIVE_UNASSEMBLED_PCB, "primitive");
+        ITEM_PCB_TYPES.put(PRIMITIVE_FAILED_PCB, "primitive");
+        ITEM_PCB_TYPES.put(PRIMITIVE_FINISHED_PCB, "primitive");
+        ITEM_PCB_TYPES.put(PRIMITIVE_SUBSTRATE, "primitive");
+
+        // flexible
+
+        ITEM_PCB_TYPES.put(FLEXIBLE_EMPTY_PCB, "flexible");
+        ITEM_PCB_TYPES.put(FLEXIBLE_UNASSEMBLED_PCB, "flexible");
+        ITEM_PCB_TYPES.put(FLEXIBLE_FAILED_PCB, "flexible");
+        ITEM_PCB_TYPES.put(FLEXIBLE_FINISHED_PCB, "flexible");
+        ITEM_PCB_TYPES.put(FLEXIBLE_SUBSTRATE, "flexible");
+
+        // high power
+
+        ITEM_PCB_TYPES.put(HIGH_POWER_EMPTY_PCB, "high_power");
+        ITEM_PCB_TYPES.put(HIGH_POWER_UNASSEMBLED_PCB, "high_power");
+        ITEM_PCB_TYPES.put(HIGH_POWER_FAILED_PCB, "high_power");
+        ITEM_PCB_TYPES.put(HIGH_POWER_FINISHED_PCB, "high_power");
+
+        // waterproof
+
+        ITEM_PCB_TYPES.put(WATERPROOF_EMPTY_PCB, "waterproof");
+        ITEM_PCB_TYPES.put(WATERPROOF_UNASSEMBLED_PCB, "waterproof");
+        ITEM_PCB_TYPES.put(WATERPROOF_FAILED_PCB, "waterproof");
+        ITEM_PCB_TYPES.put(WATERPROOF_FINISHED_PCB, "waterproof");
+
+        // high temp
+
+        ITEM_PCB_TYPES.put(HIGH_TEMP_EMPTY_PCB, "high_temp");
+        ITEM_PCB_TYPES.put(HIGH_TEMP_UNASSEMBLED_PCB, "high_temp");
+        ITEM_PCB_TYPES.put(HIGH_TEMP_FAILED_PCB, "high_temp");
+        ITEM_PCB_TYPES.put(HIGH_TEMP_FINISHED_PCB, "high_temp");
+
+        // nano
+
+        ITEM_PCB_TYPES.put(NANO_EMPTY_PCB, "nano");
+        ITEM_PCB_TYPES.put(NANO_UNASSEMBLED_PCB, "nano");
+        ITEM_PCB_TYPES.put(NANO_FAILED_PCB, "nano");
+        ITEM_PCB_TYPES.put(NANO_FINISHED_PCB, "nano");
+
+        // quantum
+
+        ITEM_PCB_TYPES.put(QUANTUM_EMPTY_PCB, "quantum");
+        ITEM_PCB_TYPES.put(QUANTUM_UNASSEMBLED_PCB, "quantum");
+        ITEM_PCB_TYPES.put(QUANTUM_FAILED_PCB, "quantum");
+        ITEM_PCB_TYPES.put(QUANTUM_FINISHED_PCB, "quantum");
+
+        // microcontroller
+
+        ITEM_PCB_TYPES.put(MICROCONTROLLER_EMPTY_PCB, "microcontroller");
+        ITEM_PCB_TYPES.put(MICROCONTROLLER_UNASSEMBLED_PCB, "microcontroller");
+        ITEM_PCB_TYPES.put(MICROCONTROLLER_FAILED_PCB, "microcontroller");
+        ITEM_PCB_TYPES.put(MICROCONTROLLER_FINISHED_PCB, "microcontroller");
+
+        // crystal clear
+
+        ITEM_PCB_TYPES.put(CRYSTAL_CLEAR_EMPTY_PCB, "crystal_clear");
+        ITEM_PCB_TYPES.put(CRYSTAL_CLEAR_UNASSEMBLED_PCB, "crystal_clear");
+        ITEM_PCB_TYPES.put(CRYSTAL_CLEAR_FAILED_PCB, "crystal_clear");
+        ITEM_PCB_TYPES.put(CRYSTAL_CLEAR_FINISHED_PCB, "crystal_clear");
+
+        // radiation hardened
+
+        ITEM_PCB_TYPES.put(RADIATION_HARDENED_EMPTY_PCB, "radiation_hardened");
+        ITEM_PCB_TYPES.put(RADIATION_HARDENED_UNASSEMBLED_PCB, "radiation_hardened");
+        ITEM_PCB_TYPES.put(RADIATION_HARDENED_FAILED_PCB, "radiation_hardened");
+        ITEM_PCB_TYPES.put(RADIATION_HARDENED_FINISHED_PCB, "radiation_hardened");
+
+        // bio compatible
+
+        ITEM_PCB_TYPES.put(BIO_COMPATIBLE_EMPTY_PCB, "bio_compatible");
+        ITEM_PCB_TYPES.put(BIO_COMPATIBLE_UNASSEMBLED_PCB, "bio_compatible");
+        ITEM_PCB_TYPES.put(BIO_COMPATIBLE_FAILED_PCB, "bio_compatible");
+        ITEM_PCB_TYPES.put(BIO_COMPATIBLE_FINISHED_PCB, "bio_compatible");
+
+        // components
+
+        ITEM_PCB_TYPES.put(SMD_CAPACITOR, "components");
+        ITEM_PCB_TYPES.put(SMD_TRANSISTOR, "components");
+        ITEM_PCB_TYPES.put(MICROCONTROLLER_CAPACITOR, "components");
+        ITEM_PCB_TYPES.put(MICROCONTROLLER_TRANSISTOR, "components");
+
+    }
 }

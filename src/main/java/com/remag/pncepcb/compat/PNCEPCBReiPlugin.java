@@ -21,8 +21,9 @@ public class PNCEPCBReiPlugin  implements REIClientPlugin {
         for (Supplier<? extends ItemLike> itemSupplier : ModItems.ITEMS.getEntries()) {
             Item item = itemSupplier.get().asItem();
             ResourceLocation id = BuiltInRegistries.ITEM.getKey(item);
+            String pcbType = ModItems.ITEM_PCB_TYPES.getOrDefault(itemSupplier, "none");
 
-            if (id != null && !ModConfig.COMMON.isItemEnabled(id.toString())) {
+            if (id != null && !ModConfig.COMMON.isItemEnabled(id.toString()) && !ModConfig.COMMON.isPcbTypeEnabled(pcbType)) {
                 registry.removeEntry(EntryStacks.of(item));
             }
         }

@@ -17,6 +17,7 @@ public class ModConfig {
 
     public static class Common {
         public final ModConfigSpec.ConfigValue<List<? extends String>> disabledItems;
+        public final ModConfigSpec.ConfigValue<List<? extends String>> disabledPcbTypes;
 
         public Common(ModConfigSpec.Builder builder) {
             builder.push("general");
@@ -30,11 +31,23 @@ public class ModConfig {
                             obj -> obj instanceof String // validator
                     );
 
+            disabledPcbTypes = builder
+                    .comment("List of PCB types to disable, e.g., [\"primitive\", \"high_power\", \"components\"]")
+                    .defineListAllowEmpty(
+                            "disabledPcbTypes",
+                            List.of(),
+                            () -> "",
+                            obj -> obj instanceof String
+                    );
+
             builder.pop();
         }
 
         public boolean isItemEnabled(String itemName) {
             return !disabledItems.get().contains(itemName);
+        }
+        public boolean isPcbTypeEnabled(String typeName) {
+            return !disabledPcbTypes.get().contains(typeName);
         }
     }
 }
