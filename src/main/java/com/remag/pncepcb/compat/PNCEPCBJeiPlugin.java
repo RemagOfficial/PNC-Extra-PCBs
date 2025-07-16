@@ -45,8 +45,9 @@ public class PNCEPCBJeiPlugin implements IModPlugin {
         for (Supplier<? extends ItemLike> itemSupplier : ModItems.ITEMS.getEntries()) {
             Item item = itemSupplier.get().asItem();
             ResourceLocation id = ForgeRegistries.ITEMS.getKey(item);
+            String pcbType = ModItems.ITEM_PCB_TYPES.getOrDefault(itemSupplier, "none");
 
-            if (id != null && !ModConfig.COMMON.isItemEnabled(id.toString())) {
+            if (id != null && !ModConfig.COMMON.isItemEnabled(id.toString()) && !ModConfig.COMMON.isPcbTypeEnabled(pcbType)) {
                 ingredientManager.removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK,
                         List.of(new ItemStack(item)));
             }
